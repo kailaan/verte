@@ -1,0 +1,365 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+:root{
+    --cor-1: #ffffff;
+    --cor-2: #100542;
+    --cor-3: #AF86EB;
+    --cor-4: #C5B0FF;
+    --font-primaria: 'Clash Grotesk', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 12%;
+}
+
+body {
+    text-decoration: none;
+    background-color: var(--cor-2);
+    color: var(--cor-1);
+    font-family: var(--font-primaria);
+    max-width: 100%;
+}
+
+#header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: 0%;
+    padding: 1% 3%;
+    align-items: center;
+    border-bottom: solid 1px var(--cor-1);
+    position: fixed;
+    top: 0;
+    z-index: 999;
+    backdrop-filter: blur(20px);
+}
+
+  .menu__links, .menu__nav {
+      width: 60%;
+      display: flex;
+      gap: 6%;
+      justify-content: center;
+  }
+
+  .menu__social {
+      display: flex;
+      gap: 10px;
+  }
+
+  a {
+      text-decoration: none;
+      color: var(--cor-1);
+      font-size: 0.8em;
+      font-family: "Kanit", sans-serif;
+      font-weight: 300;
+  }
+
+    a:hover {
+        color: var(--cor-1);
+        opacity: 0.7;
+    }
+
+    a:visited {
+        color: var(--cor-1);
+    }
+
+    a:active {
+        color: var(--cor-3);
+    }
+
+.banner img {
+    justify-content: center;
+    z-index: -9999;
+    object-fit: cover;
+}
+
+  .banner__setas {
+      width: 100%;
+      margin-top: -7%;
+      margin-bottom: 12%;
+      text-align: center;
+      animation: setas 1.3s ease infinite;
+      opacity: 0.5;
+  }
+
+  .banner__setas__2 {
+      width: 100%;
+      margin-top: 5%;
+      margin-bottom: 10%;
+      text-align: center;
+      animation: setas 1.3s ease infinite;
+      opacity: 0.5;
+  }
+
+  @keyframes setas {
+      0% {
+        transform:translateY(0px);
+      }
+      50% {
+        transform: translateY(-10px);
+      }
+      100% {
+        transform: translateY(0px);
+      }
+  }
+
+.quem__somos {
+    display: flex;
+    margin: 8% 0% 12% 0%;
+    max-width: 500px;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+    padding-top: 15%;
+}
+
+  .quem__h1 {
+      font-family: var(--font-primaria);
+      font-size: 2.5rem;
+      font-weight: 600;
+      border-bottom: solid 1px var(--cor-4);
+      color: var(--cor-3);
+      padding-bottom: 10%;
+      line-height: 2.5rem;
+  }
+
+  .quem__somos__paragrafo {
+      padding-top: 10%;
+      padding-left: 20%;
+      font-family: "Kanit", sans-serif;
+      font-weight: 200;
+      font-size: 1.2rem;
+      text-align: justify;
+      line-height: 2rem;
+  }
+
+.fazemos {
+    margin: 0% 3% 0% 3%;
+}
+
+  .fazemos__h1 {
+      font-family: var(--font-primaria);
+      color: var(--cor-3);
+      font-size: 2.5rem;
+      font-weight: 600;
+      border-bottom: solid 1px var(--cor-4);
+      padding-bottom: 1.5%;
+      line-height: 2.5rem;
+  }
+
+  .texto__port {
+      margin: 8% 25%;
+      text-align: center;
+  }
+
+  .texto__port__h1 {
+      font-family: "Kanit", sans-serif;
+      font-weight: 300;
+      color: var(--cor-1);
+      align-items: center;
+      font-size: 1.5rem;
+    /*  border-bottom: solid 2px var(--cor-3); */
+      padding-bottom: 1.5%;
+      margin-bottom: 3%;
+      line-height: 2.5rem;
+  }
+
+.banners {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1.5%;
+    gap: 10px;
+}
+
+  .fazemos__banner {
+      gap: 10px;
+      position: relative;
+      overflow: hidden;
+      max-height: 400px;
+  }
+
+  .banners__img {
+      opacity: 0.8;
+      filter: saturate(0.8);
+      border-radius: 0.5rem;
+  }
+
+  .banners__img:hover {
+      transition: 0.4s;
+      opacity: 0.4;
+      filter: saturate(0.4);
+      animation: fazemos_img 0.4s;
+  }
+
+    @keyframes fazemos_img {
+      0% {
+        transform:scale(100%);
+      }
+      50% {
+        transform:scale(99%);
+      }
+      100% {
+        transform: Scale(100%);
+      }
+    }
+
+  .texo__banner__1 {
+      text-align: left; 
+      bottom: 30px;
+      left: 30px;
+      position: absolute;
+      transition: 0.5s;
+  }
+
+  .fazemos__titulo {
+      font-size: 1.2rem;
+      font-weight: 500;
+      padding-bottom: 10px;
+  }
+
+  .fazemos__texto {
+      font-size: 0.8rem;
+      font-family: "Kanit", sans-serif;
+      font-weight: 200;
+      max-width: 170px;
+  }
+
+  .fazemos__banner > .texo__banner__1.fade {
+      opacity: 0;
+      transform: translateY(100%);
+  }
+
+  .fazemos__banner:hover > .texo__banner__1.fade {
+      opacity: 1;
+      transform: translateY(0%);
+  }
+
+.marcas__1 {
+    display: flex;
+    margin: 0% 0% 1.5% 0%;
+    padding-top: 15%;
+    justify-content: center;
+    align-items: center;
+    gap: 2.8%;
+}
+
+.marcas__2 {
+    display: flex;
+    margin: 1.5% 0% 18% 0%;
+    justify-content: center;
+    align-items: center;
+    gap: 4%;
+}
+
+.contatos {
+    display: flex;
+    flex-direction: column;
+    margin: 0% 3% 2% 3%;
+}
+
+  .contatos__h1 {
+      font-family: var(--font-primaria);
+      font-size: 2.5rem;
+      font-weight: 600;
+      color: var(--cor-3);
+      border-bottom: solid 1px var(--cor-4);
+      padding-bottom: 1.5%;
+      line-height: 2.5rem;
+  }
+
+  .contatos__texto {
+      margin-top: 2%;
+  }
+
+  .contatos__texto__p1 {
+      font-family: "Kanit", sans-serif;
+      font-size: 1.2rem;
+      font-weight: 600;
+  }
+
+  .contatos__texto__p2 {
+      font-family: "Kanit", sans-serif;
+      font-size: 0.8rem;
+      font-weight: 300;
+  }
+
+/* Style inputs, select elements and textareas */
+input[type=text], textarea {
+    width: 100%;
+    padding: 1%;
+    border: 1px solid var(--cor-4);
+    box-sizing: border-box;
+    resize: vertical;
+    background-color: var(--cor-2);
+    color: var(--cor-1);
+    font-family: var(--font-primaria);
+  }
+  
+  /* Style the submit button */
+  input[type=submit] {
+      background-color: var(--cor-3);
+      color: var(--cor-2);
+      padding: 12px 20px;
+      border: none;
+      cursor: pointer;
+      float: left;
+      margin-top: 1%;
+  }
+
+  input::placeholder {
+      font-weight: 300;
+      opacity: 0.7;
+      color: var(--cor-1);
+  }
+  
+
+.formulario {
+    margin-top: 3%;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+}
+  
+  /* Floating column for inputs: 75% width */
+  .col-75 {
+      float: left;
+      width: 100%;
+      margin-top: 1%;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+      content: "";
+      display: table;
+      clear: both;
+  }
+  
+  /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 600px) {
+    .col-75, input[type=submit] {
+        width: 100%;
+        margin-top: 0;
+    }
+  }
+
+footer {
+    font-size: 0.7rem;
+    width: 100%;
+    background-color: #130a35;
+    padding: 0.7% 0%;
+    align-items: center;
+    text-align: center;
+    color: var(--cor-3);
+    letter-spacing: 0.2rem;
+}
+
